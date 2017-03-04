@@ -1,3 +1,280 @@
 // Place all the styles related to the products controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+
+*{margin:0;padding:0;list-style-type:none;}
+a,img{border:0;}
+body{
+  line-height:2em;
+  background-color:#ffffff;
+  font-family:arial, helvetica, sans-serif;
+  color:#999999;
+  font-size:14px
+}
+
+a{
+  color:#999999;
+  text-decoration:none;
+  -webkit-transition-property:color;
+  -moz-transition-property:color;
+  -o-transition-property:color;
+  transition-property:color;
+  -webkit-transition-duration:.2s;
+  -webkit-transition-timing-function:ease-in;
+  -moz-transition-duration:.2s;
+  -moz-transition-timing-function:ease-in;
+  -o-transition-duration:.2s;
+  -o-transition-timing-function:ease-in;
+  transition-duration:.2s;
+  transition-timing-function:ease-in
+}
+
+a:hover{color:red;text-decoration:underline}
+
+/* hc_lnav */
+.hc_lnav{
+  z-index:9999;
+  position:relative;
+  width:190px;
+  margin:40px 0 0 120px;
+}
+
+.hc_lnav .allbtn{z-index:99999;position:relative}
+.hc_lnav .allbtn h2{
+  font-size:19px;
+  box-shadow:2px 0px 6px -3px #428000;
+  -webkit-box-shadow:2px 0px 6px -3px #428000;
+  -moz-box-shadow:2px 0px 6px -3px #428000;
+}
+
+.hc_lnav .allbtn h2 a{
+  line-height:36px;
+  background-color:#878b8f;
+  padding-left:36px;
+  width:180px;
+  display:block;
+  font-family:微软雅黑, 黑体;
+  height:36px;
+  color:#ffffff;
+  font-size:19px;
+  font-weight:normal;
+}
+
+.hc_lnav .allbtn h2 a:hover{background-color:#358000;text-decoration:none}
+.hc_lnav .allbtn h2 i{}
+.hc_lnav .allbtn h2 strong{}
+/*一级导航隐藏*/
+.hc_lnav .allbtn ul{
+  z-index:99999;
+  position:absolute;
+  background-color:#878b8f;
+  width:190px;
+
+  height:470px;
+  top:13px;
+  left:-110px;
+}
+
+body.hc_home .hc_lnav .allbtn ul{display:block}
+body.hc_list .hc_lnav .allbtn ul{display:block}
+.hc_lnav .allbtn ul li{padding-bottom:7px;zoom:1;clear:both;cursor:default}
+.hc_lnav .allbtn ul li .tx{
+  line-height:35px;
+  background-color:#5e6266;
+  padding-left:10px;
+  background-repeat:no-repeat;
+  background-position:right center;
+  height:35px;
+  _background-image:none;
+}
+.hc_lnav .allbtn ul li .tx a{
+  font-family:微软雅黑, 黑体;
+  color:#ffffff;
+  font-size:19px;
+  -webkit-transition:color 0.1s ease-out 0s;
+  -moz-transition:color 0.1s ease-out 0s;
+  -ms-transition:color 0.1s ease-out 0s;
+  -o-transition:color 0.1s ease-out 0s;
+  transition:color 0.1s ease-out 0s;
+}
+.hc_lnav .allbtn ul li .tx a i{
+  line-height:25px;
+  margin-top:5px;
+  width:25px;
+  background-position:0px 0px;
+  float:left;
+  height:25px;margin-right:10px;
+  text-decoration:none;
+}
+.hc_lnav .allbtn ul li.a1 .tx a i{background-image:url(../images/header_ico1.png)}
+.hc_lnav .allbtn ul li.a2 .tx a i{background-image:url(../images/header_ico2.png)}
+.hc_lnav .allbtn ul li.a3 .tx a i{background-image:url(../images/header_ico3.png)}
+.hc_lnav .allbtn ul li.a4 .tx a i{background-image:url(../images/header_ico4.png)}
+.hc_lnav .allbtn ul li dl{zoom:1;color:#ffffff;clear:both;overflow:auto;padding-top:4px}
+.hc_lnav .allbtn ul li dl a{
+  line-height:22px;
+  white-space:nowrap;
+  float:left;
+  color:#d9e7ce;
+  margin-left:6px;
+  margin-right:6px;
+  -webkit-transition:color 0.1s ease-out 0s;
+  -moz-transition:color 0.1s ease-out 0s;
+  -ms-transition:color 0.1s ease-out 0s;
+  -o-transition:color 0.1s ease-out 0s;
+  transition:color 0.1s ease-out 0s
+}
+.hc_lnav .allbtn ul li dt{padding-left:10px;width:30px;float:left;padding-top:1px}
+.hc_lnav .allbtn ul li dd{line-height:22px;width:150px;float:left;padding-top:2px}
+/*二级导航隐藏*/
+.hc_lnav .allbtn ul li .pop{
+  border-bottom:#2f3336 2px solid;
+  position:absolute;
+  border-left:medium none;
+  padding-bottom:10px;
+  background-color:#fcfcfc;
+  min-height:466px;
+  padding-left:30px;
+  width:640px;
+  padding-right:30px;
+  display:none;
+  height:470px;
+  border-top:medium none;
+  top:0px;
+  border-right:#2f3336 2px solid;
+  padding-top:10px;
+  left:190px;
+  box-shadow:4px 4px 5px -1px #999999;
+  -webkit-box-shadow:4px 4px 5px -1px #999999;
+  -moz-box-shadow:4px 4px 5px -1px #999999;
+}
+
+.hc_lnav .allbtn ul li .pop h3{display:none;font-size:19px}
+.hc_lnav .allbtn ul li .pop dl{padding-bottom:6px;color:#666666;padding-top:6px}
+.hc_lnav .allbtn ul li .pop dl:hover{background-color:#f3f3f3}
+.hc_lnav .allbtn ul li .pop dl a{color:#666666;margin-left:12px;margin-right:12px}
+.hc_lnav .allbtn ul li .pop dl a.un{color:#a5a5a5}
+.hc_lnav .allbtn ul li .pop dt{padding-left:0px;width:72px;}
+.hc_lnav .allbtn ul li .pop dd{width:565px;margin-left:-12px;}
+.hc_lnav .allbtn ul li .pop .act{
+  width:auto;
+  height:auto;
+  overflow:hidden;
+  padding-top:0px;
+}
+
+.hc_lnav .allbtn:hover ul{display:block}/*控制一级菜单显示隐藏*/
+.hc_lnav .allbtn ul li:hover{background-color:#fcfcfc}
+.hc_lnav .allbtn ul li:hover .tx{background-color:#f5f5f5}
+.hc_lnav .allbtn ul li:hover .tx a{color:#333333}
+.hc_lnav .allbtn ul li:hover .tx a i{background-position:0px -25px}
+
+.hc_lnav .allbtn ul li:hover .pop{display:block;top:0px;left:190px}/*控制二级菜单显示隐藏*/
+.hc_lnav .allbtn ul li:hover .pop dl a.un{color:#a5a5a5;text-decoration:none}
+.hc_lnav .allbtn ul li:hover dl{color:#6e6e6e}
+.hc_lnav .allbtn ul li:hover a{color:#666666}
+.hc_lnav .allbtn ul li:hover a:hover{color:#cd0606}
+
+
+
+
+/* 主页图片css */
+.recommend .pic {
+  width:1300px;
+  height:470px;
+  padding:12px 12px 0;
+  background:#f8f8f8;
+  position:relative;
+  margin:0 auto;
+  border-radius:6px;
+}
+
+.recommend .pic ul {
+  width:1300px;
+  height:470px;
+  position:absolute;
+  top:12px;
+  left:12px;
+}
+.recommend .pic ul li {
+  width:1300px;
+  height:470px;
+  border:1px
+  solid #fff;
+  position:absolute;
+  top:0;
+  left:0;
+}
+
+.recommend .pic ul img {
+  width:1300px;
+   height:470px;
+ }
+.recommend .pic ol {
+  position:absolute;
+  top:460px;
+  right:12px;
+}
+
+.recommend .pic ol li,.recommend .pic ol img {
+  width:54px;
+  height:30px;
+}
+
+.recommend .pic ol li {
+  border:3px solid #fff;
+  margin-bottom:13px;
+}
+.recommend .pic ol .active { border:3px solid #d6191d; }
+.recommend .pic p {
+  line-height:32px;
+  position:absolute;
+  left:12px;
+  bottom:0px;
+}
+
+
+/*搜索功能键*/
+
+
+#search .form { position:absolute; left:310px; top:56px; border:3px solid #847a7a; z-index:3; }
+#search .form .text {
+  width:480px;
+  height:42px;
+  line-height:22px;
+  padding:0 12px;
+  border:none;
+  background:#fff;
+  border-radius:3px;
+  float:left;
+  margin-right:10px;
+  font-size:15px;
+  font-family:'微软雅黑';
+  color:#312b2b;
+  box-shadow:inset 2px 2px 3px rgba(0,0,0,0.25);
+ }
+#search .form .btn {
+  font-size:15px;
+  color:#e9dddd;
+  width:63px;
+  height:42px;
+  border:none;
+  background:#878b8f
+  no-repeat -163px 0;
+  float:left; }
+
+
+
+  .rollBox{width:1300px;overflow:hidden;padding:12px 0 5px 6px;}
+  .rollBox .LeftBotton{height:95px;width:95px;background:url('https://ww4.sinaimg.cn/large/006tKfTcgy1fd224ar3oaj302n02n0i4.jpg') no-repeat 11px 0;overflow:hidden;float:left;display:inline;margin:25px 0 0 0;cursor:pointer;}
+  .rollBox .RightBotton{height:95px;width:95px;background:url('https://ww3.sinaimg.cn/large/006tNbRwgy1fd2joftdhpj302n02n0hn.jpg') no-repeat -8px 0;overflow:hidden;float:left;display:inline;margin:25px 0 0 0;cursor:pointer;}
+  .rollBox .Cont{width:900px;overflow:hidden;float:left;}
+  .rollBox .ScrCont{width:10000000px;}
+  .rollBox .Cont .pic{width:225px;float:left;text-align:center;}
+  .rollBox .Cont .pic img{padding:4px;background:#fff;border:1px solid #777070;display:block;margin:0 auto;}
+  .rollBox .Cont .pic p{line-height:26px;color:#505050;}
+  .rollBox .Cont a:link,.rollBox .Cont a:visited{color:#626466;text-decoration:none;}
+  .rollBox .Cont a:hover{color:#f00;text-decoration:underline;}
+  .rollBox #List1,.rollBox #List2{float:left;}
