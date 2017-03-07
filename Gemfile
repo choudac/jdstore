@@ -39,6 +39,7 @@ gem 'mini_magick'
 gem 'letter_opener', group: :development
 gem 'aasm'
 gem 'will_paginate'
+gem 'figaro'
 
 
 group :development, :test do
