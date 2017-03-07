@@ -1,0 +1,2 @@
+class ZytController < ApplicationController
+end
